@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel or Consonant Checker</title>
+</head>
+<body>
+    <!-- Input field for the character -->
+    <label for="charInput">Enter a single letter:</label>
+    <input type="text" id="charInput" maxlength="1">
+
+    <!-- Button to trigger the check -->
+    <button onclick="checkVowelOrConsonant()">Check</button>
+
+    <!-- Placeholder for displaying the result -->
+    <p id="result"></p>
+
+    <script>
+        function checkVowelOrConsonant() {
+            // Get the input value and trim any whitespace
+            const char = document.getElementById('charInput').value.trim();
+
+            // Reference to the result paragraph
+            const resultElement = document.getElementById('result');
+
+            // Regular expression to check if the input is a single letter (uppercase or lowercase)
+            const letterRegex = /^[a-zA-Z]$/;
+
+            // Check if the input is a valid single letter
+            if (!letterRegex.test(char)) {
+                resultElement.textContent = "Please enter a valid letter.";
+                return;
+            }
+
+            // Convert the character to lowercase for comparison
+            const lowerChar = char.toLowerCase();
+
+            // Check if the character is a vowel
+            if (['a', 'e', 'i', 'o', 'u'].includes(lowerChar)) {
+                resultElement.textContent = `${char} is a vowel.`;
+            } else {
+                resultElement.textContent = `${char} is a consonant.`;
+            }
+        }
+    </script>
+</body>
+</html>

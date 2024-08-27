@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyForms</title>
+</head>
+<body>
+    <form action="images.html" medhod="post" >
+        <label>Name: </label>
+        <input type ="text" id="name"> <br/> <br/> 
+        <label>Email: </label>
+        <input type ="email" id="email" name="email"><br/> <br/> 
+        
+        <label>Numbers:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10"> <br/> <br />
+        
+        <label for="searchforproducts">Search for products</label>
+        <input type="search" id="searchforproducts" name="searchforproducts"><br /> <br />
+        <label>Start Date: </label><br /> <br />
+        <input type="date" name="date"/> <br /><br />
+
+        <Label>City: </Label>
+        <select id="city" name="city">
+            <option value="BNG">Bangalore</option>
+            <option value="CHE">Chennai</option>
+            <option value="DEL">Delhi</option>
+        </select>
+        <br /><br />
+
+        <label>Interests: </label> <br /> <br />
+        <div id="interests">
+        <label><input type="checkbox" name ="interests" value="sports"/>Sports</label> <br /><br />
+        <label><input type="checkbox" name ="interests" value="music"/>Music</label> <br /><br />
+        <label><input type="checkbox" name ="interests" value="dance"/>Dance</label> <br /><br />
+        </div> <br /> <br />
+
+        <label>Main Interest: </label> <br /> <br />
+        <div id="interests">
+        <label><input type="radio" name ="interests" value="sports"/>Sports</label> <br /><br />
+        <label><input type="radio" name ="interests" value="music"/>Music</label> <br /><br />
+        <label><input type="radio" name ="interests" value="dance"/>Dance</label> <br /><br />
+        </div> <br /> <br />
+
+
+        
+        Password:<input type="password" name="password"> <br /><br />
+
+        <button>Submit</button>
+        
+        
+    </form>
+    
+</body>
+</html>

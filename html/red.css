@@ -1,0 +1,14 @@
+.list-item {
+    color: black;
+    font-size: 20px;
+    margin: 5px 0;
+  }
+  .third-item {
+    color: red;
+  }
+  #list-container {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+  }

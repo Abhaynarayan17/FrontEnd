@@ -1,0 +1,12 @@
+/* type selector*/
+        p{ color:blueviolet;
+
+        }
+        /* class selector*/
+        .x{
+            color: blueviolet;
+        }
+        /* id selector*/
+        #intro{
+            color:rgb(0, 157, 255);
+        }
