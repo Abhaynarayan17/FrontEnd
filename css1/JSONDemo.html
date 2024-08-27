@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Accessing RESTful API </title></head><body>    <h1 style="text-align:center">Demo: RESTful API Access</h1>    <div id="api-response"></div>    <script>        const apiUrl = 'https://jsonplaceholder.typicode.com/users';        async function FetchDataFromAPI() {            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new error('Network response was not ok' + response.statusText);
+                }
+                const strdata = await response.json();
+                DisplayData(strdata);
+            } catch (error) {
+                document.getElementById('api-response').innerText = 'Error Fetching data';
+            }
+        }        function DisplayData(Data) {            const responseDiv = document.getElementById('api-response');
+            responseDiv.innerHTML = '<h2>Response From API:</h2>';
+            Data.forEach(item => {
+                const postDiv = document.createElement('div');
+                postDiv.innerHTML = `<h4>Name: ${item.name}</h4> <p>&emsp; Email: ${item.email}<br> &emsp;Phone: ${item.phone} <br>&emsp;Website: ${item.website}</p>`;
+                responseDiv.appendChild(postDiv); 
+            });
+        }    </script>    <input type="button" value="Fetch Data..." onclick="FetchDataFromAPI()"></body></html>

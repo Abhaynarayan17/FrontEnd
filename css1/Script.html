@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script>
+        /* var aProperty;
+        document.write("Navigator Object Properties < br /> "); // lists all the functions of Navigator
+        for (aProperty in navigator)
+        {
+            document.write(aProperty);
+            document.write("<br />");
+        }
+        document.write("Exiting from the loop!"); */
+
+
+        function validateUser() {
+            //var strName = document.getElementById("omega").value;
+            // alert(strName);
+
+            var strUserName = document.myform.txtName.value;
+            var strPassword = document.myform.txtName1.value;
+
+            if (strUserName === "Abhay" && strPassword === "Omega") {
+                alert("Access Granted :)");
+            }
+            else {
+                alert("Access Denied :(");
+            }
+        }
+        /*function over() {
+            alert("Mouse over");
+        }
+
+        function out() {
+            alert("Mouse out");
+        }*/
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        //document.write("Inside Body Tag");
+    </script>
+
+    <form name="myform">
+        Name: <input type="text" size="20" name="txtName" id="omega" /> <br /><br />
+        Password : <input type="text" size="20" name="txtName1" /><br /><br />
+
+        <input type="button" onclick="validateUser()"
+               onmouseover="over()" onmouseout="out()" value="Submit" />
+    </form>
+</body>
+</html>

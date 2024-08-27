@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Flowers School</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="schoologo.png" alt="School Logo" class="logo">
+            <nav>
+                <ul class="menu-bar">
+                    <li><a href="Week5Day1.html">Home</a></li>
+                    <li><a href="#" id="profileButton">Student Profile</a></li>
+                </ul>
+            </nav>
+        
+    </header>
+
+    <main>
+        <section id="welcome" style="display: none;">
+            <h1>Welcome to Spring Flowers School</h1>
+            <p>
+                Spring Flowers School is a premier educational institution dedicated to providing a nurturing and stimulating environment for students to grow and thrive.
+                Our school is committed to fostering academic excellence, creativity, and character development in our students.
+                At Spring Flowers School, we believe in the importance of building strong relationships between students, teachers, and parents. 
+                We encourage open communication, mutual respect, and a sense of community, creating a warm and welcoming atmosphere that makes our school a happy and supportive place to learn.
+            </p>
+        </section>
+
+        <section id="profile" style="display: none;">
+            <h2>Student Profile</h2>
+            <p id="studentInfo">Loading...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Spring Flowers School. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('profileButton').addEventListener('click', function () {
+            document.getElementById('welcome').style.display = 'none';
+            document.getElementById('profile').style.display = 'block';
+            document.getElementById('studentInfo').innerText = 'Name: Abhaynarayan A\nID: 20201CSE0808\nSection: 8CSE11 \nAddress: B9 Bharath Nagar BEML Nagar \nPhone Number: 7483246241\n Blood Group: O + \nDate of Birth: 17-04-2002';
+        });
+    </script>
+</body>
+</html>
